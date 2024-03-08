@@ -13,6 +13,7 @@ const (
 	LLM_API_MODEL    = "llm-api-model"
 	LLM_API_KEY      = "llm-api-key"
 	LLM_API_KEY_FILE = "llm-api-key-file"
+	SINGLE_RUN_MODE  = "single-run-mode"
 	DEBUG            = "debug"
 )
 
@@ -26,6 +27,7 @@ func populateDefaults() {
 	viper.Set(LLM_API_HOST, "https://api.anthropic.com/v1/messages")
 	viper.Set(LLM_API_KEY_FILE, "~/.config/.chat_cli/key")
 	viper.Set(LLM_API_MODEL, "claude-3-opus-20240229")
+	viper.Set(SINGLE_RUN_MODE, false)
 }
 
 func prepareEnv() {
